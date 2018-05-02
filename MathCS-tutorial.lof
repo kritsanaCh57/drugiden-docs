@@ -1,0 +1,98 @@
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {thai}
+\select@language {english}
+\select@language {thai}
+\hspace {-1cm}รูปที่\hfill หน้า\hspace {-0.1cm}
+\setlength {\parskip }{0.0cm}
+\thispagestyle {myheadings}
+\select@language {thai}
+\select@language {thai}
+\contentsline {figure}{\numberline {\normalfont 2.1}{\ignorespaces โครงสร้างของ Ionic Framework\relax }}{6}
+\contentsline {figure}{\numberline {\normalfont 2.2}{\ignorespaces โครงสร้างของ Cordova\relax }}{6}
+\contentsline {figure}{\numberline {\normalfont 2.3}{\ignorespaces ความแตกต่างสถาปัตยกรรมระหว่าง Containers และ Virtual Machines\relax }}{9}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage {\hspace {-1cm}รูปที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\contentsline {figure}{\numberline {\normalfont 2.4}{\ignorespaces คำสั่งในการใช้งาน Docker\relax }}{11}
+\contentsline {figure}{\numberline {\normalfont 2.5}{\ignorespaces รูปแบบโครงสร้างของ HTTP Request\relax }}{13}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage {\hspace {-1cm}รูปที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\contentsline {figure}{\numberline {\normalfont 2.6}{\ignorespaces รูปแบบโครงสร้างของ HTTP response\relax }}{14}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage {\hspace {-1cm}รูปที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\contentsline {figure}{\numberline {\normalfont 2.7}{\ignorespaces ตัวอย่างรูปแบบของ JSON\relax }}{15}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage {\hspace {-1cm}รูปที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\contentsline {figure}{\numberline {\normalfont 2.8}{\ignorespaces ตัวอย่างรูปแบบของ JSON Web Token\relax }}{16}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage {\hspace {-1cm}รูปที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\contentsline {figure}{\numberline {\normalfont 2.9}{\ignorespaces ตัวอย่างการสร้าง JSON Web Token\relax }}{16}
+\contentsline {figure}{\numberline {\normalfont 2.10}{\ignorespaces ตัวอย่างการตรวจสอบ JSON Web Token\relax }}{17}
+\contentsline {figure}{\numberline {\normalfont 2.11}{\ignorespaces ภาพแบบ Binary \relax }}{18}
+\contentsline {figure}{\numberline {\normalfont 2.12}{\ignorespaces ภาพแบบ Grayscale \relax }}{19}
+\contentsline {figure}{\numberline {\normalfont 2.13}{\ignorespaces ภาพแบบ RBG \relax }}{19}
+\contentsline {figure}{\numberline {\normalfont 2.14}{\ignorespaces สมการการทำ Thresholding รูปภาพ\relax }}{20}
+\contentsline {figure}{\numberline {\normalfont 2.15}{\ignorespaces ตัวอย่างการทำ Thresholding รูปภาพต้นฉบับขนาด 10x10 พิกเซล\relax }}{20}
+\contentsline {figure}{\numberline {\normalfont 2.16}{\ignorespaces ตัวอย่างการทำ Thresholding รูปภาพผลลัพธ์ขนาด 10x10 พิกเซล\relax }}{21}
+\contentsline {figure}{\numberline {\normalfont 2.17}{\ignorespaces ตัวอย่างการตราจหา Canny Edge\relax }}{22}
+\contentsline {figure}{\numberline {\normalfont 2.18}{\ignorespaces ตัวอย่างการใช้งานฟังก์ชัน cv2.findContours() โดยกำหนดค่าพารามิเตอร์เป็น cv2.CHAIN{\_}APPROW{\_}NONE\relax }}{23}
+\contentsline {figure}{\numberline {\normalfont 2.19}{\ignorespaces ตัวอย่างการใช้งานฟังก์ชัน cv2.findContours() โดยกำหนดค่าพารามิเตอร์เป็น cv2.CHAIN{\_}APPROW{\_}SIMPLE \relax }}{23}
+\contentsline {figure}{\numberline {\normalfont 2.20}{\ignorespaces ผลลัพธ์ของการหา Contours\relax }}{24}
+\contentsline {figure}{\numberline {\normalfont 2.21}{\ignorespaces รูปแบบ kernel function ในแบบต่างๆ\relax }}{24}
+\select@language {thai}
+\contentsline {figure}{\numberline {\normalfont 3.1}{\ignorespaces ภาพรวมของแอปพลิเคชันค้นหายาเพื่อคุณ\relax }}{29}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage {\hspace {-1cm}รูปที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\contentsline {figure}{\numberline {\normalfont 3.2}{\ignorespaces Use Case Diagram ของแอปพลิเคชันค้นหายาเพื่อคุณ\relax }}{32}
+\contentsline {figure}{\numberline {\normalfont 3.3}{\ignorespaces Class Diagram ของแอปพลิเคชันค้นหายาเพื่อคุณ\relax }}{35}
+\contentsline {figure}{\numberline {\normalfont 3.4}{\ignorespaces Sequence Diagram ของการค้นหายาแบบทั่วไป\relax }}{38}
+\contentsline {figure}{\numberline {\normalfont 3.5}{\ignorespaces Sequence Diagram ของการค้นหายาแบบขั้นสูง\relax }}{39}
+\contentsline {figure}{\numberline {\normalfont 3.6}{\ignorespaces Sequence Diagram ของการถ่ายรูปภาพเพื่อพิสูจน์เอกลักษณ์ยาเม็ด\relax }}{41}
+\contentsline {figure}{\numberline {\normalfont 3.7}{\ignorespaces Sequence Diagram ของการดูรายการบุ๊กมาร์ก\relax }}{42}
+\contentsline {figure}{\numberline {\normalfont 3.8}{\ignorespaces State Diagram ส่วนการค้นหายาและการแสดงรายละเอียดยา\relax }}{45}
+\contentsline {figure}{\numberline {\normalfont 3.9}{\ignorespaces State Diagram ส่วนการถ่ายรูปเพื่อการพิสูจน์เอกลักษณ์ยา\relax }}{46}
+\contentsline {figure}{\numberline {\normalfont 3.10}{\ignorespaces ตัวอย่างข้อมูลสำหรับการฝึกแบบจำลองรูปทรงสี่เหลี่ยม\relax }}{48}
+\contentsline {figure}{\numberline {\normalfont 3.11}{\ignorespaces แสดงการขั้นตอนการทำความสะอาดข้อมูลรูปสำหรับใช้ฝึกและสอน\relax }}{49}
+\contentsline {figure}{\numberline {\normalfont 3.12}{\ignorespaces การกำหนดค่าพารามิเตอร์ของแบบจำลอง SVM\relax }}{49}
+\contentsline {figure}{\numberline {\normalfont 3.13}{\ignorespaces การกำหนดค่าพารามิเตอร์ของแบบจำลอง KNN\relax }}{50}
+\contentsline {figure}{\numberline {\normalfont 3.14}{\ignorespaces การกำหนดค่าพารามิเตอร์ของแบบจำลอง RFC\relax }}{51}
+\contentsline {figure}{\numberline {\normalfont 3.15}{\ignorespaces แสดงการวัดขนาดวัตถุด้วยการใช้วัตถุอ้างอิง\relax }}{54}
+\select@language {thai}
+\contentsline {figure}{\numberline {\normalfont 4.1}{\ignorespaces การค้นหายาแบบทั่วไป\relax }}{57}
+\contentsline {figure}{\numberline {\normalfont 4.2}{\ignorespaces การค้นหายาแบบขั้นสูง\relax }}{58}
+\contentsline {figure}{\numberline {\normalfont 4.3}{\ignorespaces การถ่ายรูปภาพ\relax }}{60}
+\contentsline {figure}{\numberline {\normalfont 4.4}{\ignorespaces การเรียกใช้งานเว็บเซอร์วิสs\relax }}{61}
+\contentsline {figure}{\numberline {\normalfont 4.5}{\ignorespaces การติดต่อฐานข้อมูลของเว็บเซอร์วิส\relax }}{62}
+\contentsline {figure}{\numberline {\normalfont 4.6}{\ignorespaces การสร้างและการตรวจสอบ JSON Web Token\relax }}{63}
+\contentsline {figure}{\numberline {\normalfont 4.7}{\ignorespaces การถอดรหัสรูปภาพ BASE64\relax }}{65}
+\contentsline {figure}{\numberline {\normalfont 4.8}{\ignorespaces การ routing ของเว็บเซอร์วิส\relax }}{67}
+\contentsline {figure}{\numberline {\normalfont 4.9}{\ignorespaces การประมวลผลภาพ\relax }}{70}
+\contentsline {figure}{\numberline {\normalfont 4.10}{\ignorespaces การประมวลผลภาพ(ต่อ)\relax }}{71}
+\contentsline {figure}{\numberline {\normalfont 4.11}{\ignorespaces การประมวลผลภาพ(ต่อ)\relax }}{72}
+\contentsline {figure}{\numberline {\normalfont 4.12}{\ignorespaces การประมวลผลภาพ(ต่อ)\relax }}{73}
+\contentsline {figure}{\numberline {\normalfont 4.13}{\ignorespaces การประมวลผลภาพ(ต่อ)\relax }}{74}
+\select@language {thai}
+\select@language {thai}
+\select@language {thai}
+\select@language {thai}
+\select@language {thai}
+\contentsline {figure}{\numberline {ก.1}{\ignorespaces หน้าเว็บดาวน์โหลด Node.js\relax }}{92}
+\contentsline {figure}{\numberline {ก.2}{\ignorespaces ไฟล์ติดตั้งสำหรับติดตั้ง Node.js\relax }}{93}
+\contentsline {figure}{\numberline {ก.3}{\ignorespaces หน้าต่างตอนรับของ Node.js\relax }}{93}
+\contentsline {figure}{\numberline {ก.4}{\ignorespaces หน้าต่างข้อตกลงในการใช้ Node.js\relax }}{94}
+\contentsline {figure}{\numberline {ก.5}{\ignorespaces หน้าต่างเลือกโฟลเดอร์ที่จะทำการติดตั้ง Node.js\relax }}{94}
+\contentsline {figure}{\numberline {ก.6}{\ignorespaces หน้าต่างติดตั้ง Node.js\relax }}{95}
+\contentsline {figure}{\numberline {ก.7}{\ignorespaces คำสั่งสำหรับติดตั้ง ionic framework\relax }}{95}
+\contentsline {figure}{\numberline {ก.8}{\ignorespaces หน้าเว็บสำหรับดาวน์โหลด OpenCV\relax }}{96}
+\contentsline {figure}{\numberline {ก.9}{\ignorespaces ไฟล์ติดตั้ง OpenCV\relax }}{96}
+\contentsline {figure}{\numberline {ก.10}{\ignorespaces เลือกโฟรเดอร์สำหรับติดตั้ง OpenCV\relax }}{96}
+\contentsline {figure}{\numberline {ก.11}{\ignorespaces เปิด properties ของ This PC\relax }}{97}
+\contentsline {figure}{\numberline {ก.12}{\ignorespaces หน้าต่างของ System\relax }}{97}
+\contentsline {figure}{\numberline {ก.13}{\ignorespaces หน้าต่าง System Properties\relax }}{98}
+\contentsline {figure}{\numberline {ก.14}{\ignorespaces หน้าต่าง Evnironment Variables\relax }}{99}
+\select@language {thai}
+\contentsline {figure}{\numberline {ข.1}{\ignorespaces หน้าดาวน์โหลดแอปพลิเคชันค้นหายาเพื่อคุณผ่านบริการ Google Play\relax }}{100}
+\select@language {thai}
+\contentsline {figure}{\numberline {ค.1}{\ignorespaces หน้าแรกของแอปพลิเคชันค้นหายาเพื่อคุณ\relax }}{101}
+\contentsline {figure}{\numberline {ค.2}{\ignorespaces หน้าค้นหายาของแอปพลิเคชันค้นหายาเพื่อคุณ\relax }}{102}
+\contentsline {figure}{\numberline {ค.3}{\ignorespaces หน้ารายการการค้นหายา\relax }}{103}
+\contentsline {figure}{\numberline {ค.4}{\ignorespaces หน้าแสดงรายละเอียดยา\relax }}{105}
+\contentsline {figure}{\numberline {ค.5}{\ignorespaces หน้าถ่ายรูปภาพ\relax }}{106}
+\contentsline {figure}{\numberline {ค.6}{\ignorespaces หน้าแสดงผลลัพธ์การพิสูจน์เอกลักษณ์ยา\relax }}{107}
+\select@language {thai}
+\select@language {thai}

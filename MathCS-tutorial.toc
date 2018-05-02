@@ -1,0 +1,311 @@
+\rightline {หน้า}
+\select@language {english}
+\select@language {english}
+\select@language {english}
+\select@language {thai}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}
+\contentsline {nchapter}{\bfseries กิตติกรรมประกาศ}{\normalfont ค}
+\select@language {english}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}Chapter\hfill Page\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}
+\contentsline {nchapter}{\bfseries บทคัดย่อภาษาไทย}{\normalfont ง}
+\select@language {thai}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\contentsline {nchapter}{\bfseries สารบัญ}{\normalfont จ}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\contentsline {nchapter}{\bfseries สารบัญตาราง}{\normalfont ซ}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\contentsline {nchapter}{\bfseries สารบัญภาพ}{\normalfont ฌ}
+\select@language {thai}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\leftline {\bfseries บทที่}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{0cm}
+\contentsline {chapter}{\numberline {\normalfont 1}บทนำ}{1}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 1.1}ที่มาและเหตุผล }{1}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 1.2}วัตถุประสงค์}{2}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 1.3}ขอบเขตของโครงงาน}{2}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 1.4}ประโยชน์ที่คาดว่าจะได้รับ}{2}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 1.5}เครื่องมือที่ใช้ในการพัฒนา}{2}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 1.6}ขั้นตอนการดำเนินงาน}{4}
+\select@language {thai}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{0cm}
+\contentsline {chapter}{\numberline {\normalfont 2}ทฤษฎีที่เกี่ยวข้อง}{5}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 2.1}ความรู้พื้นฐานเกี่ยวกับ Ionic Framework}{5}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.1.1}รายละเอียดของ Cordova}{6}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.1.2}Hybrid Mobile Application }{7}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.1.3}Lifecycle events }{7}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.1.4}ข้อดีและข้อเสียของ Ionic Framework}{8}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 2.2}ความรู้พื้นฐานเกี่ยวกับภาษา TypeScript}{8}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 2.3}ความรู้พื้นฐานเกี่ยวกับ Docker }{8}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.3.1}รายละเอียดของ Docker Concepts}{9}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.3.2}ข้อดีของ Docker}{10}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.3.3}คำสั่งเบื้องต้น}{10}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.3.4}การใช้งาน Docker ใน Ubuntu}{11}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 2.4}ความรู้พื้นฐานเกี่ยวกับ HTTP Protocol}{11}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.4.1}HTTP Method}{12}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.4.2}รายละเอียดของ HTTP Request}{12}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.4.3}รายละเอียดของ HTTP Response}{13}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.4.4}รายละเอียดของ HTTP Response}{13}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 2.5}ความรู้พื้นฐานเกี่ยวกับ RESTful API}{14}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 2.6}การทำ Authentication ด้วย JSON Web Token }{14}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.6.1}การพิสูจน์ตัวตน (Authentication)}{14}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.6.2}รายละเอียดของ JSON Web Token (JWT) }{15}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.6.3}การใช้งาน JSON Web Token}{16}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.6.4}ข้อดีและข้อเสียของ JWT}{17}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 2.7}ความรู้พื้นฐานเกี่ยวกับ OpenCV (Open Source Computer Vision) }{17}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.7.1}การประมวลผลภาพ (Image Processing)}{18}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.7.2}การทำ Thresholding รูปภาพ}{20}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.7.3}การตรวจหา Canny Edge}{21}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsubsection}{\numberline {\normalfont \normalfont \normalfont \normalfont 2.7.3.1}ลดสัญญาณรบกวน (Noise Reduction)}{21}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsubsection}{\numberline {\normalfont \normalfont \normalfont \normalfont 2.7.3.2}การหาการไล่ระดับสีความเข้มของภาพ (Gradient)}{21}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsubsection}{\numberline {\normalfont \normalfont \normalfont \normalfont 2.7.3.3}Nonmaxima Suppression}{22}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.7.4}การหา Contour Approximation}{22}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.7.5}Support Vector Machines (SVM)}{24}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.7.6}K-Nearest Neighbour Algorithm }{25}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsubsection}{\numberline {\normalfont \normalfont \normalfont \normalfont 2.7.6.1}ขั้นตอนวิธีการดำเนินการของอัลกอริทึมแบบ K-Nearest Neighbour Algorithm มีดังนี้}{25}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsubsection}{\numberline {\normalfont \normalfont \normalfont \normalfont 2.7.6.2}การดำเนินการหลักของอัลกอริทึมแบบ K-Nearest Neighbour Algorithm ประกอบไปด้วยการทำงาน 2 ฟังก์ชัน ได้แก่}{26}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 2.7.7}Random Forest Classifier }{26}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 2.8}การหาขนาดของยาด้วยการใช้วัถตุอ้างอิง}{26}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 2.9}เครื่องมือที่ใช้ในการพัฒนา}{27}
+\select@language {thai}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{0cm}
+\contentsline {chapter}{\numberline {\normalfont 3}การวิเคราะห์และออกแบบระบบ}{28}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 3.1}รายละเอียดการออกแบบแอปพลิเคชัน}{28}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 3.1.1}ส่วนแอปพลิเคชัน}{28}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 3.1.2}ส่วนเว็บเซอร์วิส}{30}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 3.2}Use Case Diagram}{31}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 3.3}Class Diagram}{34}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 3.4}Sequence Diagram}{37}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 3.4.1}Sequence Diagram ของการค้นหายาแบบทั่วไป}{38}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 3.4.2}Sequence Diagram ของการค้นหายาแบบขั้นสูง}{39}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 3.4.3}Sequence Diagram ของการถ่ายรูปภาพเพื่อพิสูจน์เอกลักษณ์ยาเม็ด}{41}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 3.4.4}Sequence Diagram ของการดูรายการบุ๊กมาร์ก}{42}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 3.5}State Diagram}{44}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 3.6}การประมวลผลภาพยาเม็ดเพื่อการพิสูจน์เอกลักษณ์ยาเม็ด}{47}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 3.6.1}ทดลองการจำแนกรูปทรงของยาเม็ดด้วยการเรียนรู้ของเครื่อง (Machines Learning)}{47}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 3.6.2}การหาขนาดด้านยาวของเม็ดยาโดยใช้วัถตุอ้างอิงที่รู้ขนาด}{53}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {subsection}{\numberline {\normalfont \normalfont \normalfont 3.6.3}การหาลักษณะสีของยาเม็ด}{54}
+\select@language {thai}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{0cm}
+\contentsline {chapter}{\numberline {\normalfont 4}การสร้างระบบ}{56}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 4.1}การค้นหายาแบบทั่วไป}{56}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 4.2}การค้นหายาแบบขั้นสูง}{58}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 4.3}การถ่ายรูปภาพ}{59}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 4.4}การเรียกใช้งานเว็บเซอร์วิส}{60}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 4.5}การติดต่อฐานข้อมูลของเว็บเซอร์วิส}{62}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 4.6}การสร้างและการตรวจสอบ JSON Web Token}{62}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 4.7}การถอดรหัสรูปภาพ BASE64}{64}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 4.8}การ routing ของเว็บเซอร์วิส}{66}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 4.9}การประมวลผลภาพ}{69}
+\select@language {thai}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{0cm}
+\contentsline {chapter}{\numberline {\normalfont 5}การทดสอบระบบ}{77}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 5.1}ผลการทดสอบการค้นหายาแบบทั่วไป}{78}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 5.2}ผลการทดสอบการค้นหายาแบบขั้นสูง}{78}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 5.3}ผลการทดสอบเลือกดูรายละเอียดยา}{79}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 5.4}ผลการทดสอบถ่ายรูปภาพเพื่อการพิสูจน์เอกลักษณ์ยาเม็ด}{80}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 5.5}ผลการทดสอบการ rounting ของเว็บเซอร์วิส}{82}
+\select@language {thai}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{0cm}
+\contentsline {chapter}{\numberline {\normalfont 6}สรุปและข้อเสนอแนะ}{84}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 6.1}สรุปความสามารถของระบบ}{84}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 6.2}ปัญหาและอุปสรรคในการพัฒนา}{85}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont \normalfont 6.3}แนวทางการพัฒนาต่อ}{86}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{0.5cm}
+\contentsline {nchapter}{\bfseries บรรณานุกรม}{\normalfont 89}\vspace *{0.5cm}
+\select@language {thai}
+\select@language {thai}
+\vspace *{0.5cm}
+\setlength {\tocindentchap }{1.4em}
+\gentocwidthparam 
+{\setlength {\tocnwidthchap }{10.0em}}
+\select@language {thai}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}
+\contentsline {nchapter}{\bfseries ภาคผนวก}{\normalfont 92}
+\vspace *{-0.5cm}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{0cm}
+\contentsline {chapter}{ภาคผนวก\nobreakspace {}\numberline {ก}การติดตั้งเครื่องมือที่ใช้พัฒนาโปรแกรม}{92}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont ก.1}การติดตั้ง Node.js}{92}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont ก.2}การติดตั้ง Ionic Framwork}{95}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{-0.5cm}\normalfont 
+\contentsline {section}{\numberline {\normalfont ก.3}การติดตั้ง OpenCV}{95}
+\select@language {thai}
+\vspace *{-0.5cm}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{0cm}
+\contentsline {chapter}{ภาคผนวก\nobreakspace {}\numberline {ข}การติดตั้งแอปพลิเคชันค้นหายาเพื่อคุณ}{100}
+\select@language {thai}
+\vspace *{-0.5cm}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{0cm}
+\contentsline {chapter}{ภาคผนวก\nobreakspace {}\numberline {ค}คู่มือการใช้งานแอปพลิเคชันค้นหายาเพื่อคุณ}{101}
+\select@language {thai}
+ \setlength {\pageleft }{\textheight - \pagetotal } \ifdim \pageleft < 1cm \newpage \centerline {\bfseries \relax \fontsize {17.28}{22}\selectfont } {\hspace {-1cm}บทที่\hfill หน้า\hspace {-0.1cm}} \fi 
+\vspace *{0.5cm}
+\contentsline {nchapter}{\bfseries ประวัติผู้เขียน}{\normalfont 108}
+\select@language {thai}

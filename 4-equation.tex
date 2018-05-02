@@ -1,0 +1,601 @@
+\chapter{การสร้างระบบ}
+การสร้างระบบงานเป็นส่วนหนึ่งของการพัฒนาแอปพลิเคชันค้นหายาเพื่อคุณและเว็บเซอร์วิส ซึ่งจะอธิบายการทำงานของแต่ละส่วน ดังนี้
+\begin{itemize}
+	\item การค้นหายาแบบทั่วไป
+  	\item การค้นหายาแบบขั้นสูง
+  	\item การถ่ายรูปภาพ
+  	\item	การเรียกใช้งานเว็บเซอร์วิส
+  	\item	การติดต่อฐานข้อมูลของเว็บเซอร์วิส
+  	\item	การสร้างและการตรวจสอบ JSON Web Token
+	\item	การถอดรหัสรูปภาพ BASE64
+	\item	การ routing ของเว็บเซอร์วิส
+  	\item	การประมวลผลภาพ
+\end{itemize}
+
+\section{การค้นหายาแบบทั่วไป}
+
+	เมื่อผู้ใช้งานกรอกข้อความในแถบค้นหาทั่วไป 
+	ระบบจะร้องขอการค้นหากับเว็บเซอร์วิสและส่งรายการการค้นหากลับมาแสดงที่หน้ารายการค้นหา 
+	แสดงดังภาพที่ \ref{Fig:searchGeneral}
+	
+	\begin{figure}[H]
+		{\setstretch{1.0}\begin{lstlisting}
+onInput()  {        
+	this.offsetStart  =  1;        
+	this.offsetEnd  =  20;        
+	this.content.resize();        
+	if  (this.searchText)  {            
+		this.searchProvider.ganeralSearch(this.searchText.trim(),  this.offsetStart,  this.offsetEnd).then(data  =>  {     
+			this.drugs  =  data['results'];                
+			this.drugsLength  =  data['length'];          
+			if  (data['length']  ==  0)  {          
+				this.presentToast();          
+			}      
+		}).catch((error)  =>  {          
+			let  alert  =  this.alertCtrl.create({                    
+				title: Error,  
+				buttons:  ['close']          
+			});          
+			alert.present();     
+		});    
+	}   
+}		
+		\end{lstlisting}}
+		\caption{การค้นหายาแบบทั่วไป}
+		\label{Fig:searchGeneral}
+	\end{figure}
+	จากภาพที่ \ref{Fig:searchGeneral} อธิบายการทำงานของการค้นหายาแบบทั่วไป ได้ดังนี้
+	\begin{itemize}[label={--}]
+		\item บรรทัดที่  2-3 	กำหนดค่าของตัวแปร สำหรับกำหนดช่วงของรายการที่ต้องการ
+		\item บรรทัดที่  4	เป็นคำสั่งเพื่อปรับขนาดของหน้า content
+		\item บรรทัดที่  5	เป็นเงื่อนไข ถ้าหากตัวแปรว่างหรือไม่เก็บข้อความใดๆ จะไม่มีการเรียกใช้งานเซอร์วิส
+		\item บรรทัดที่  6	เป็นการใช้งานคลาส SearchProvider ฟังก์ชัน ganeralSearch เพื่อร้องขอการค้นหากับเว็บเซอร์วิส 
+		\item บรรทัดที่  7	เก็บรายการของการค้นหายาเป็นอาเรย์ในตัวแปร
+		\item บรรทัดที่  8	เก็บความยาวของรายการการค้นหายาในตัวแปร
+		\item บรรทัดที่  9-10	เงื่อนไขใช้ตรวจสอบความยาวของรายการยา ถ้าหากเท่ากับ 0 แสดงว่าไม่พบเจอรายการ และจะแสดงข้อความขึ้นมาบนหน้าจอ
+		\item บรรทัดที่  13-17	ถ้าหากการร้องขอรายการค้นหาเกิดข้อผิดพลาด จะแสดงข้อความขึ้นมาบนหน้าจอ
+	\end{itemize}
+
+\section{การค้นหายาแบบขั้นสูง}
+	เมื่อผู้ใช้งานกรอกรายละเอียดยาจากหน้าค้นหา 
+	ระบบจะร้องขอการค้นหากับเว็บเซอร์วิสและส่งรายการการค้นหากลับมาแสดงที่หน้ารายการค้นหา 
+	แสดงดังภาพที่ \ref{Fig:searchAdvance}
+
+	\begin{figure}[H]
+		{\setstretch{1.0}\begin{lstlisting}
+advanceSearch()  {        
+	let  params  =  this.advanceModel();        
+	let  loading  =  this.loadingCtrl.create({            
+		content:   'Searhing...'        
+	});        
+    loading.present();        
+	this.content.resize();        
+	this.offsetStart  =  1;        
+	this.offsetEnd  =  20;        
+	this.searchProvider.advanceSearch(params,  this.offsetStart,  this.offsetEnd).then(data  =>  {          
+		this.drugs  =  data['results'];            
+		this.drugsLength  =  data['length'];            
+		loading.dismiss();            
+		if  (data['length']  ==  0)  {                
+			this.presentToast();            
+		}        
+   }).catch((error)  =>  {            
+        loading.dismiss();            
+        let  alert  =  this.alertCtrl.create({  
+            title: Error  
+	    });            
+	    alert.present();        
+	});    
+}    
+		\end{lstlisting}}
+		\caption{การค้นหายาแบบขั้นสูง}
+		\label{Fig:searchAdvance}
+	\end{figure}
+	จากภาพที่ \ref{Fig:searchAdvance} อธิบายการทำงานของการค้นหาแบบขั้นสูง ได้ดังนี้
+	\begin{itemize}[label={--}]
+		\item บรรทัดที่ 2	กำหนดตัวแปรสำหรับเก็บข้อมูลโมเดลของ
+		\item บรรทัดที่ 3-6	แสดงการ loading 
+		\item บรรทัดที่ 7	เป็นคำสั่งเพื่อปรับขนาดของหน้า content
+		\item บรรทัดที่ 8-9	กำหนดค่าของตัวแปร สำหรับกำหนดช่วงของรายการที่ต้องการ
+		\item บรรทัดที่ 10	เป็นการใช้งานคลาส SearchProvider ฟังก์ชัน advanceSearch เพื่อร้องขอการค้นหากับเว็บเซอร์วิส
+		\item บรรทัดที่ 11	เก็บรายการของการค้นหายาเป็นอาเรย์ในตัวแปร
+		\item บรรทัดที่ 12	เก็บความยาวของรายการการค้นหายาในตัวแปร
+		\item บรรทัดที่ 13	ปิดการแสดงการ loading
+		\item บรรทัดที่ 14-15	เงื่อนไขใช้ตรวจสอบความยาวของรายการยา ถ้าหากเท่ากับ 0 แสดงว่าไม่พบเจอรายการ และจะแสดงข้อความขึ้นมาบนหน้าจอ
+		\item บรรทัดที่ 17-21	ถ้าหากการร้องขอรายการค้นหาเกิดข้อผิดพลาด จะแสดงข้อความขึ้นมาบนหน้าจอ
+		
+	\end{itemize}
+
+
+\section{การถ่ายรูปภาพ}
+	ในหน้าการถ่ายรูปภาพเพื่อพิสูจน์เอกลักษณ์ยา 
+	เมื่อผู้ใช้งานกดเปิดกล้อง 
+	ระบบจะทำการเรียกใช้งานไลบรารี่ Camera ของ Cordova 
+	เพื่อทำเรียกใช้งานกล้องของอุปกรณ์ 
+	แสดงดังภาพที่ \ref{Fig:camera}
+
+	\begin{figure}[H]
+		{\setstretch{1.0}\begin{lstlisting}
+options:  CameraOptions  =   {        
+    quality:  70,  
+	destinationType:  this.camera.DestinationType.DATA_URL,  
+    encodingType:  this.camera.EncodingType.JPEG,  
+    mediaType:  this.camera.MediaType.PICTURE    
+}    
+takePicture()   {              
+    this.camera.getPicture(this.options).then((imageData)   =>   {                      
+        this.imagebase64 = 'data:image/jpeg;base64,'   +   imageData;              
+    },     (err)   =>   {                      
+        console.log(err);              
+    });      
+}      
+		\end{lstlisting}}
+		\caption{การถ่ายรูปภาพ}
+		\label{Fig:camera}
+	\end{figure}
+	จากภาพที่ \ref{Fig:camera} อธิบายการทำงานของการถ่ายรูปภาพ ได้ดังนี้
+	\begin{itemize}[label={--}]
+		\item บรรทัดที่ 1-6	กำหนด options ของการถ่ายรูป คุณภาพของรูป ชนิดของรูปภาพ 
+		\item บรรทัดที่ 7-13	เป็นฟังก์ชันการถ่ายรูปภาพ เมื่อการถ่ายรูปสำเร็จ รูปภาพจะถูกเก็บในรูปแบบ base64 ในตัวแปรชื่อ imagebase64
+		\item บรรทัดที่ 8	เปิดการทำงานของกล้องถ่ายรูปบนอุปกรณ์
+		\item บรรทัดที่ 9 	กำหนดตัวแปร imagebase64 สำหรับเก็บรูปภาพในรูปแบบ base64 ที่ได้จากการถ่ายรูป
+	\end{itemize}
+
+\section{การเรียกใช้งานเว็บเซอร์วิส}
+	การเรียกใช้งานเว็บเซอร์วิสด้วยการใช้ไลบรารี HTTP ของ Cordova 
+	แสดงดังภาพที่ \ref{Fig:callService}
+
+	\begin{figure}[H]
+		{\setstretch{1.0}\begin{lstlisting}
+setOption()  {        
+    let  headers  =  new  Headers;        
+    headers.set('api-key',  this.apiToken);        
+    headers.append('Content-type',  'application/json')  this.opt  =  new  RequestOptions({            
+        headers:  headers        
+    });    
+}    
+ganeralSearch(input:  string,  offsetStart:  any,  offsetEnd:  any)  {        
+    if  (offsetStart  ==  -1  ||  offsetEnd  ==  -1)  {            
+	    offsetStart  =  1,  offsetEnd  =  10;        
+	}        
+	return  new  Promise((resolve,  reject)  =>  {            
+		this.http.get(`${this.apiEndPoint}/drugs/search?input=${input}&offsetStart=${offsetStart}&offsetEnd=${offsetEnd}`,  this.opt).map(res  =>  res.json()).subscribe(data  =>  {                
+			resolve(data);            
+		},  error  =>  {                
+			reject(error);            
+		});        
+    });    
+}    
+		\end{lstlisting}}
+		\caption{การเรียกใช้งานเว็บเซอร์วิสs}
+		\label{Fig:callService}
+	\end{figure}
+	จากภาพที่ \ref{Fig:callService} อธิบายการทำงานของการใช้งานเว็บเซอร์วิส ได้ดังนี้
+	
+	\begin{itemize}[label={--}]
+		\item บรรทัดที่ 1-7	เป็นฟังก์ชันการกำหนดค่าเริ่มต้นของ Header โดยจะกำหนดรูปแบบและส่ง api-token 
+		\item บรรทัดที่ 8-19	เป็นฟังก์ชันสำหรับติดต่อกับเว็บเซอร์วิส โดยยกตัวอย่างการค้นหาแบบทั่วไป
+		\item บรรทัดที่ 12-17	เป็นการเรียกใช้งาน HTTP แบบ GET จะร้องขอไปที่อยู่ (URL) ของเว็บเซอร์วิส
+		
+	\end{itemize}
+
+\section{การติดต่อฐานข้อมูลของเว็บเซอร์วิส}
+	การติดต่อกับฐานข้อมูลการพิสูจน์เอกลักษณํยาเม็ดหรือแคปซูลของคณะเภสัชศาสตร์ มหาวิทยาวัยอุบลราชธานี 
+	ใช้ไลบรารี่ของ nodejs ชื่อ mysql 
+	แสดงดังภาพที่ \ref{Fig:connectDB}
+
+	\begin{figure}[H]
+		{\setstretch{1.0}\begin{lstlisting}
+const  mysql  =  require('mysql');    
+const  configDB  =  require('./config');    
+var  pool  =  mysql.createPool(configDB.info);    
+pool.getConnection(function(err,  connection)  {        
+	if  (err)  throw  err;        
+	console.log('Connected',  new  Date());    
+});    
+		\end{lstlisting}}
+		\caption{การติดต่อฐานข้อมูลของเว็บเซอร์วิส}
+		\label{Fig:connectDB}
+	\end{figure}
+	จากภาพที่ \ref{Fig:connectDB} อธิบายการทำงานของการติดต่อฐานข้อมูลของเว็บเซอร์วิส ได้ดังนี้
+	\begin{itemize}[label={--}]
+		\item บรรทัดที่ 1	กำหนดตัวแปรชื่อ mysql สำหรับเก็บไลบรารีชื่อว่า mysql
+		\item บรรทัดที่ 2	กำหนดตัวแปรชื่อ configDB สำหรับเก็บข้อมูลการ key-value เพื่อใช้ติดต่อกับฐานข้อมูล
+		\item บรรทัดที่ 3	กำหนดตัวแปรชื่อ pool สำหรับเก็บข้อมูลการสร้างการเชื่อมต่อกับฐานข้อมูล
+		\item บรรทัดที่ 4-7	เป็นการเรียกใช้งานฟังก์ชันชื่อว่า getConnection เพื่อติดต่อกับฐานข้อมูล 
+	\end{itemize}
+
+
+\section{การสร้างและการตรวจสอบ JSON Web Token}
+	นำ JSON Web Token มาช่วยในการระบุตัวตนก่อนให้ใช้งานกับเว็บเซอร์วิส 
+	โดยใช้ไลบรารี่ของ nodejs ชื่อว่า jsonwebtoken 
+	แสดงดังภาพที่ \ref{Fig:jsonwebtokenMaker}
+	\begin{figure}[H]
+		{\setstretch{1.0}\begin{lstlisting}
+var  jwt  =  require('jsonwebtoken');    
+var  fs  =  require('fs');    
+const  uuid  =  require('uuid/v4');    
+module.exports  =   {        
+	sign:   function(req,  res,  next)  {            
+		var  data  =   {                
+			id:  req.query.id,  
+			uuid:  uuid()            
+		};            
+		var  cert  =  fs.readFileSync('./auth/keys/private.key');            
+		jwt.sign(data,  cert,   {                
+			algorithm:   'RS256',  
+			expiresIn:   "120d"            
+		},  function(err,  token)  {                
+			if  (err)  {                    
+				console.log('Token error ',  err.message);                    
+				return  res.status(405).send({                        
+					err:  err                    
+				});                
+			}                
+			req.query.token  =  token;                
+			return  res.status(200).send({                    
+				token:  req.query.token                
+			});            
+		});        
+	},verify:   function(req,  res,  next)  {            
+		var  cert  =  fs.readFileSync('./auth/keys/public.pem');            
+		jwt.verify(req.headers['api-key'],  cert,   {                
+			algorithms:  ['RS256']            
+		},  function(err,  payload)  {                
+			if  (err)  {                    
+				return  res.status(401).send({                        
+					err:  err                    
+				});                
+			}                
+			req.query.payload  =  payload;                
+			next();           
+		});        
+	}  
+};    
+		\end{lstlisting}}
+		\caption{การสร้างและการตรวจสอบ JSON Web Token}
+		\label{Fig:jsonwebtokenMaker}
+	\end{figure}
+	จากภาพที่ \ref{Fig:jsonwebtokenMaker} อธิบายการทำงานของการสร้างและการตรวจสอบ JSON Web Token ได้ดังนี้
+	\begin{itemize}[label={--}]
+		\item บรรทัดที่ 1	กำหนดตัวแปรชื่อ jwt สำหรับเรียกใช้งานไลบารีชื่อว่า jsonwebtoken 
+		\item บรรทัดที่ 2	กำหนดตัวแปรชื่อ js สำหรับเรียกใช้งานไลบารีชื่อว่า js เพื่อการเขียนไฟล์
+		\item บรรทัดที่ 5-26	เป็นฟังก์ชันการสร้าง jwt โดยจะใช้ fs อ่านไฟล์ชื่อว่า private.pem เพื่อใช้สำหรับการเข้ารหัส กำหนดรูปแบบและอายุการใช้งานของ jwt
+		\item บรรทัดที่ 27-40	เป็นฟังก์ชันการตรวจสอบความถูกต้องของ jwt โดยจะใช้ fs อ่านไฟล์ชื่อว่า public.pem เพื่อใช้สำหรับการถอดรหัสและตรวจสอบ jwt
+	\end{itemize}
+
+
+\section{การถอดรหัสรูปภาพ BASE64}
+	ในการส่งรูปภาพจากเครื่องผู้ใช้งานมายังเว็บเซอร์วิส 
+	จะถูกส่งรูปภาพมาในรูปแบบ base64 
+	แสดงดังรูปภาพที่ \ref{Fig:decodeBase64}
+
+	\begin{figure}[H]
+		{\setstretch{1.0}\begin{lstlisting}
+var  fs  =  require('fs');    
+const  uuid  =  require('uuid/v4');    
+module.exports  =   {        
+	decode64:   function(req,  res,  next)  {            
+		var  body  =  req.body;            
+		var  base64Data  =  body.imageBase64.replace(/^data:image\/jpeg;base64,/,  "");            
+		let  filename  =  `${uuid()}.jpeg`;            
+		let  filePath  =  `./assets/images/${filename}`;            
+		fs.writeFile(filePath,  base64Data,  'base64',  function(err)  {                
+			if  (err)  {                    
+				console.log('Error ',  err.message);                    
+				return  res.status(500).send(err.message);                
+			}                
+			req.query.filename  =  filename;                
+			req.query.filePath  =  filePath;                
+			console.log(req.query.filePath);                
+			next();            
+		});       
+	}    
+};    
+		\end{lstlisting}}
+		\caption{การถอดรหัสรูปภาพ BASE64}
+		\label{Fig:decodeBase64}
+	\end{figure}
+	จากภาพที่ \ref{Fig:decodeBase64} อธิบายการทำงานของการถอดรหัสรูปภาพ BASE64 ได้ดังนี้
+	\begin{itemize}[label={--}]
+		\item บรรทัดที่ 1	กำหนดตัวแปรชื่อ js สำหรับเรียกใช้งานไลบารีชื่อว่า js เพื่อการเขียนไฟล์
+		\item บรรทัดที่ 2	กำหนดตัวแปรชื่อ uuid สำหรับเรียกใช้งานไลบารีชื่อว่า uuid/v4 เพื่อการสร้างชื่อไฟล์
+		\item บรรทัดที่ 4-19	เป็นฟังก์ชันการถอดรหัสรูปภาพ BASE64
+		\item บรรทัดที่ 5	กำหนดตัวแปรชื่อ body สำหรับเก็บค่าจาก req.body
+		\item บรรทัดที่ 6	กำหนดตัวแปรชื่อ base64Data สำหรับเก็บข้อมูลรูปภาพจาก body 
+		\item บรรทัดที่ 7	กำหนดตัวแปรชื่อ filename สำหรับเก็บชื่อไฟล์ภาพ จากการเรียกใช้งานฟังก์ชัน uuid ของไลบรารี่ uuid/v4
+		\item บรรทัดที่ 9 	เรียกใช้งานฟังก์ชัน writeFile จาก fs สำหรับการเขียนไฟล์
+		\item บรรทัดที่ 14-15	เก็บค่า filename กับ filePate ไว้ใน req.query
+		\item บรรทัดที่ 17	เรียกฟังก์ชัน next() เพื่อทำงานฟังก์ชันต่อไป
+	\end{itemize}
+
+\section{การ routing ของเว็บเซอร์วิส}
+การ routing ของเว็บเซอร์วิสใช้ไบรารี่ของ nodejs ชื่อ express 
+สำหรับเป็นเว็บเซอร์วิสติดต่อกับฐานข้อมูลและประมวลผลภาพ 
+แสดงดังภาพที่ \ref{Fig:expressRouting}
+
+	\begin{figure}[H]
+		{\setstretch{1.0}\begin{lstlisting}
+var   app   =   require('express')();      
+var   bodyParser   =   require('body-parser');      
+var   cors   =   require('cors');      
+var   POST   =   process.env.PORT   ||   5000;    
+var   con   =   require('./db/connectDB')   
+var   jwt   =   require('./auth/auth');      
+var   decode64   =   require('./base64/base64');     
+var   opencv    =    require('./openCV/svmTest');        
+app.use(bodyParser.json({              
+	limit:     '5mb'      
+}));      
+app.use(bodyParser.urlencoded({              
+	limit:     '5mb',  
+	extended:   true      
+}));      
+app.use(cors());      
+app.use('/drugs',   jwt.verify,   con.checkAuth);    
+app.get('/token/sign',   jwt.sign);      
+app.get('/token/verify',   jwt.verify,   jwt.verified);    
+app.get('/drugs/id',   con.getDrug);      
+app.get('/drugs/search',   con.genaralSearchDrugs);      
+app.get('/drugs/search/advance',   con.advanceSearchDrugs);      
+app.get('/drugs/dimg',   con.getDimg);      
+app.get('/drugs/bookmarks',   con.getBookmarks)  
+app.get('/ddl/color',   con.ddlColor);      
+app.get('/ddl/dgroup',   con.ddlDgroup);      
+app.get('/ddl/drtype',   con.ddlDrtype);      
+app.get('/ddl/dshape',   con.ddlDshape);      
+app.get('/ddl/dsize',   con.ddlDsize);      
+app.get('/ddl/dstatus',   con.ddlDstatus);      
+app.get('/ddl/dtype',   con.ddlDtype);      
+app.get('/ddl/shapetype',    con.ddlShapetype);      
+app.post('/api/drugs/upload',   decode64.decode64,   opencv.getSizeAndColors,   opencv.predict);      
+var   server   =   app.listen(POST,   function()   {              
+	console.log('express is running on port:'   +   POST);      
+});      
+		\end{lstlisting}}
+		\caption{การ routing ของเว็บเซอร์วิส}
+		\label{Fig:expressRouting}
+	\end{figure}
+	จากภาพที่ \ref{Fig:expressRouting} อธิบายการทำงานของการ routing ของเว็บเซอร์วิส ได้ดังนี้
+	\begin{itemize}[label={--}]
+		\item บรรทัดที่ 1	เรียกใช้งานไลบรารี Express และเก็บไว้ในตัวแปรชื่อ app เป็นไลบรารีหลักในการทำงานของ Web application framework
+		\item บรรทัดที่ 2	เรียกใช้งานไลบรารี bodyparser และเก็บไว้ในตัวแปรชื่อ bodyparser เป็น Middleware ทำหน้าที่เป็นตัวกรอง requeset 
+		\item บรรทัดที่ 3	เรียกใช้งานไลบรารี cors และเก็บไว้ในตัวแปรชื่อ cors เป็นกลไลที่ทำให้เว็บเซอร์วิสสามารถอนุญาตการร้องขอทรัพยากรจากเครื่องผู้ใช้งาน
+		\item บรรทัดที่ 4	กำหนดตัวแปรชื่อ PORT 
+		\item บรรทัดที่ 5	เรียกใช้งานการเชื่อมต่อกับฐานข้อมูล เก็บไว้ในตัวแปรชื่อ 
+		\item บรรทัดที่ 6	เรียกใช้งานการจัดการ JSON web token เก็บไว้ในตัวแปรชื่อ jwt
+		\item บรรทัดที่ 4	เรียกใช้งานการถอดรหัสรูปภาพ base64 เก็บไว้ในตัวแปรชื่อ decode64
+		\item บรรทัดที่ 8-15	กำหนดค่าของเริ่มต้นของ Middleware
+		\item บรรทัดที่ 16	กำหนดการ routing เพื่อตรวจสอบการร้องขอก่อนจะให้เรียกทรัพยากร ด้วยการตรวจสอบ JWT ที่ส่งมาด้วยกับ HTTP Request 
+		\item บรรทัดที่ 18	กำหนดการ routing สำหรับการจ้องขอเพื่อขอ JWT 
+		\item บรรทัดที่ 19	กำหนดการ routing สำหรับการตรวจสอบ JWT
+		\item บรรทัดที่ 20	กำหนดการ routing สำหรับการร้องขอทรัพยากรรายการยาแบบละเอียด
+		\item บรรทัดที่ 21	กำหนดการ routing สำหรับการร้องขอทรัพยากรแบบการค้นหายาทั่วไป
+		\item บรรทัดที่ 22	กำหนดการ routing สำหรับการร้องขอทรัพยากรแบบการค้นหายาขั้นสูง
+		\item บรรทัดที่ 23	กำหนดการ routing สำหรับการร้องขอทรัพยากรรายการรูปภาพของยา
+		\item บรรทัดที่ 24	กำหนดการ routing สำหรับการร้องขอทรัพยากรรายการยาที่ผู้ใช้งานบุ๊กมาร์กไว้ที่เครื่อง
+		\item บรรทัดที่ 25	กำหนดการ routing สำหรับการร้องขอทรัพยากรรายการ Dropdownlist ลักษณะสีของยา
+		\item บรรทัดที่ 26	กำหนดการ routing สำหรับการร้องขอทรัพยากรรายการ Dropdownlist ประเภททะเบียนยา
+		\item บรรทัดที่ 27	กำหนดการ routing สำหรับการร้องขอทรัพยากรรายการ Dropdownlist รูปแบบผลิตภัณฑ์
+		\item บรรทัดที่ 28	กำหนดการ routing สำหรับการร้องขอทรัพยากรรายการ Dropdownlist สัญลักษณ์ที่ปรากฏบนเม็ดยา
+		\item บรรทัดที่ 29	กำหนดการ routing สำหรับการร้องขอทรัพยากรรายการ Dropdownlist ขนาดของยา
+		\item บรรทัดที่ 30	กำหนดการ routing สำหรับการร้องขอทรัพยากรรายการ Dropdownlist สถานะของยา
+		\item บรรทัดที่ 31	กำหนดการ routing สำหรับการร้องขอทรัพยากรรายการ Dropdownlist รูปร่างลักษณะยา
+		\item บรรทัดที่ 32	กำหนดการ routing สำหรับการร้องขอทรัพยากรรายการ Dropdownlist ของรูปทรงยา
+		\item บรรทัดที่ 33	กำหนดการ routing สำหรับการร้องขอเพื่อส่งรูปภาพยามาที่เว็บเซอร์วิสเพื่อประมวลผลรูปภาพยา
+		\item บรรทัดที่ 34-36	ให้เว็บเซอร์วิสทำงานที่ PORT ที่ถูกกำหนดไว้
+	\end{itemize}
+	
+
+\section{การประมวลผลภาพ}
+	การประมวลภาพรูปภาพใช้ไลบรารีของ nodejs ชื่อ opencv4nodejs 
+	แสดงดังภาพที่ \ref{Fig:imageProcessing1}
+
+	\begin{figure}[H]
+		{\setstretch{1.0}\begin{lstlisting}\ContinueLineNumber
+predict:   function(req,  res,  next)  {        
+    let  testDataPath  =  `./src/assets/threshold/${req.query.filename}`;        
+    let  img  =  cv.imread(testDataPath);        
+    img  =  img.resize(64,  64);        
+    try  {            
+        const  desc  =  computeHOGDescriptorFromImage(img,  false);            
+        if  (!desc)  {                
+            throw  new  Error(`Computing HOG descriptor failed for file: ${file}`);            
+        }            
+        let  svmPredict  =  svm.predict(desc);            
+        let  dshape  =   [];            
+        let  predict  =   {                
+            label:  lccs[svmPredict],  
+            colors:  req.query.colors,  
+			colorid:  req.query.colorid,  
+			colorname:  req.query.colorname,  
+			width:  req.query.width,  
+			dshape:  lccs[svmPredict]]            
+        }            
+        return  res.status(200).send(predict);        
+    }   
+		\end{lstlisting}}
+		\caption{การประมวลผลภาพ}
+		\label{Fig:imageProcessing1}
+	\end{figure}
+	\begin{figure}[H]
+		{\setstretch{1.0}\begin{lstlisting}\ContinueLineNumber
+	catch  (err)  {            
+		return  res.status(200).send({                
+			isError:  true,  
+			messages:  err            
+		});        
+	}},  getSizeAndColors:   function(req,  res,  next)  {        
+	let  testDataPath  =  `./src/assets/images/${req.query.filename}`;        
+	let  mat  =  cv.imread(testDataPath);        
+	mat  =  mat.resize(1024,  1024);        
+	const  know_width  =  11.3       
+	const  know_heigth  =  7.3       
+	let  boundingRect  =   [];        
+	let  num  =  0;        
+	const  thd  =  1500;        
+	const  threshold  =  100;        
+	const  matGray  =  mat.bgrToGray();        
+	var  thresh  =  matGray.threshold(100,  255,  0);    
+	const  contours  =  thresh.findContours(cv.RETR_CCOMP,  cv.CHAIN_APPROX_SIMPLE,  new  cv.Point(0,  0));        
+try  {            
+	for  (let  i  =  0;  i  <  contours.length;  i++)  {                
+		var  brect  =  contours[i].boundingRect();                
+		const  pt1  =  new  cv.Point(brect.x,  brect.y);                
+		const  pt2  =  new  cv.Point(brect.x  +  brect.width,  brect.y  +  brect.height);                
+		if  (brect.width  *  brect.height  >=  thd)  {                    
+			boundingRect.push(brect);                    
+			num++;                    
+			mat.drawRectangle(pt2,  pt1,  blue);                    
+			const  region  =  mat.getRegion(brect);               
+		}   
+		else  {                    
+			mat.drawRectangle(pt2,  pt1,  red);                
+		}            
+	}           
+	var  matThresh  =  mat.threshold(100,  255,  0);           
+	\end{lstlisting}}
+	\caption{การประมวลผลภาพ(ต่อ)}
+	\label{Fig:imageProcessing2}
+	\end{figure}
+
+	\begin{figure}[H]
+		{\setstretch{1.0}\begin{lstlisting}\ContinueLineNumber
+	if  (num  <  2)  {                
+		return  res.send({                    
+			isError:  true,  
+			messages:   'contounrs < 2.'                
+		});            
+	}            
+	boundingRect.sort(function(rect1,  rect2)  {                
+		if  (rect1.height  +  rect1.width  >  rect2.height  +  rect2.width)  {                    
+			return  1;                
+		}            
+	});            
+	const  padding  =  5;            
+	const  newRect  =  new  cv.Rect((boundingRect[0].x  -  padding)  >=  0  ?  boundingRect[0].x  -  padding  :  0,   (boundingRect[0].y  -  padding)  >=  0  ?  boundingRect[0].y  -  padding  :  0,  mat.cols  -  (boundingRect[0].x  +  boundingRect[0].width  +  padding  *  2)  >=  0  ?  (boundingRect[0].width  +  padding  *  2)  :  boundingRect[0].width,  mat.rows  -  (boundingRect[0].y  +  boundingRect[0].height  +  padding  *  2)  >=  0  ?  (boundingRect[0].height  +  padding  *  2)  :  boundingRect[0].height);
+	const  region  =  thresh.getRegion(newRect);            
+	var  cols  =  region.cols;            
+	var  rows  =  region.rows;            
+	var  pad  =  0;            
+	if  (region.cols  >  region.rows)  {                
+		pad  =  region.cols  -  region.rows;                
+		rows  +=  pad;            
+	}   
+	else  {                
+		pad  =  region.rows  -  region.cols;                
+		cols  +=  pad;            
+	}            
+	var  matPadded  =  new  cv.Mat(rows,  cols,  cv.CV_8UC1,  0);            
+	for  (let  i  =  0;  i  <  region.rows;  i++)  {                
+		for  (let  j  =  0;  j  <  region.cols;  j++)  {                    
+			let  atMat  =  region.at(i,  j);                    
+			if  (region.cols  >  region.rows)  {                        
+				matPadded.set(i  +  (pad  /  2),  j,  atMat);                    
+			}   
+		\end{lstlisting}}
+		\caption{การประมวลผลภาพ(ต่อ)}
+		\label{Fig:imageProcessing2}
+	\end{figure}
+
+	\begin{figure}[H]
+		{\setstretch{1.0}\begin{lstlisting}\ContinueLineNumber
+			else  {                        
+				matPadded.set(i,  j  +  (pad  /  2),  atMat);                    
+			}                
+		}            
+	}            
+	matPadded  =  matPadded.resize(64,  64);            
+	let  matCanny  =  matPadded.canny(threshold,  threshold,  3,  true);            
+	let  matInvert  =  matCanny.bitwiseNot();            
+	cv.imwrite(`./src/assets/threshold/${req.query.filename}`,  matInvert);           
+	var  point  =   [];            
+	var  colors  =   [];            
+		var  colorid  =   [];            
+		var  colorname  =   [];            
+	let  hexColors  =   ['FFFFFF',  'ea0000',  'fe700e',  'ffe400',  'efeddb',  'a8e26a',  '4a9fe0',  '120992',  'fdb1ef',  'c977db',  'c2924a',  'cccccc',  '000000']            
+	let  nameColors  =   [];     
+	point.push([boundingRect[0].x  +  (boundingRect[0].width  /  4),  boundingRect[0].y  +  (boundingRect[0].height  /  4)]);            
+	point.push([boundingRect[0].x  +  (boundingRect[0].width  /  4),  boundingRect[0].y  +  (boundingRect[0].height  *  3  /  4)]);            
+	point.push([boundingRect[0].x  +  (boundingRect[0].width  *  3  /  4),  boundingRect[0].y  +  (boundingRect[0].height  /  4)]);            
+	point.push([boundingRect[0].x  +  (boundingRect[0].width  *  3  /  4),  boundingRect[0].y  +  (boundingRect[0].height  *  3  /  4)]);            
+	for  (let  i  =  0;  i  <  4;  i++)  {                
+		let  bgr  =  matThresh.atRaw(parseInt(point[i][1]),  parseInt(point[i][0]));                
+		let  diffColor  =  101;                
+		let  indexColor  =  0;                
+		let  hexColor  =  rgbHex(bgr[2],  bgr[1],  bgr[0]); 
+	 	\end{lstlisting}}
+		\caption{การประมวลผลภาพ(ต่อ)}
+		\label{Fig:imageProcessing3}
+	\end{figure}
+	\begin{figure}[H]
+		{\setstretch{1.0}\begin{lstlisting}
+		for  (let  j  =  0;  j  <  hexColors.length;  j++)  {                    
+			let  tmp  =  cd.compare(hexColor,  hexColors[j]);                    
+			if  (tmp  <  diffColor)  {                        
+				diffColor  =  tmp;                        
+				indexColor  =  j;                    
+			}                
+		}                
+		if  (!colorid.includes(indexColor  +  1))  {                    
+			colors.push(hexColors[indexColor]);                    
+			colorid.push(indexColor  +  1);                    
+			colorname.push(nameColors[indexColor]);                
+		}            
+	}            
+	const  Rwidth  =  boundingRect[1].width  <  boundingRect[1].height  ?  boundingRect[1].height  :  boundingRect[1].width;            
+	const  Owidth  =  boundingRect[0].width  <  boundingRect[0].height  ?  boundingRect[0].height  :  boundingRect[0].width;            
+	const  width  =   (know_width  /  Rwidth)  *  Owidth;            
+	req.query.colors  =  colors;            
+	req.query.colorid  =  colorid;            
+	req.query.colorname  =  colorname;            
+	req.query.boundingRect  =  boundingRect[0];            
+	req.query.width  =  width;            
+	next();        
+	}   
+	catch  (err)  {            
+		return  res.status(200).send({                
+			isError:  true,  
+			messages:  err            
+		});        
+	}    
+}   
+	 	\end{lstlisting}}
+		\caption{การประมวลผลภาพ(ต่อ)}
+		\label{Fig:imageProcessing4}
+	\end{figure}
+	จากภาพที่ \ref{Fig:imageProcessing1} อธิบายการทำงานของการประมวลผลภาพ ได้ดังนี้
+	\begin{itemize}[label={--}]
+		\item บรรทัดที่ 1-26	ฟังก์ชันการจำแนกรูปทรงของยา
+		\item บรรทัดที่ 27-137 ฟังก์ชันสำหรับการประมวลผลภาพเพื่อหาขนาดและสีของเม็ดยา
+		\item บรรทัดที่ 2-3	กำหนด path และอ่านไฟล์มาเก็บในตัวแปร img
+		\item บรรทัดที่ 4	ปรับขนาดของรูปภาพเป็นขนาด 64x64 พิกเซล
+		\item บรรทัดที่ 6-9	เรียกฟังก์ชันสำหรับการแปรงรูปภาพให้เป็นอาเรย์ เพื่อที่จะนำไปจำแนกรูปทรง
+		\item บรรทัดที่ 10	เรียกฟังก์ชันเพื่อจำแนกรูปทรงของยาและเก็บที่ตัวแปรชื่อว่า svmPredict
+		\item บรรทัดที่ 11	กำหนดตัวชื่อ dshape เป็น label ของรูปทรงต่างๆ 
+		\item บรรทัดที่ 12-19	กำหนดตัวชื่อ predict สำหรับเก็บผลลัพธ์การประมวลผล
+		\item บรรทัดที่ 20	คืนผลลัพธ์กลับไปที่เครื่องผู้ใช้งาน
+		\item บรรทัดที่ 28-29 กำหนด path และอ่านไฟล์มาเก็บในตัวแปร mat
+		\item บรรทัดที่ 31-32 กำหนดขนาดด้านยาวและด้านกว้างของวัตถุอ้างอิง ในตัวแปรชื่อ {know\_width} และ {know\_height}
+		\item บรรทัดที่ 33	กำหนดตัวแปรชื่อว่า boundingRect สำหรับเก็บ Contounr
+		\item บรรทัดที่ 35	กำหนดตัวแปรชื่อ thd เก็บค่า threshold เพื่อค่าขั้นต่ำของขนาด Contounr 
+		\item บรรทัดที่ 36	กำหนดตัวแปรชื่อ threshold เก็บค่า threshold ของการปรับภาพให้เป็น Canny Edge
+		\item บรรทัดที่ 37	ปรับภาพเป็นให้ภาพ Grayscale
+		\item บรรทัดที่ 38	ปรับ threshold ของภาพ Grayscale
+		\item บรรทัดที่ 39	นำภาพจากตัวแปร thresh มาหา Contounrs ด้วยฟังก์ชัน fildContounrs 
+		\item บรรทัดที่ 41-53	ตรวจหา contounr ที่เป็นวัถตุอ้างอิงและวัตถุเป้าหมาย (ยา) และเก็บในอาเรย์ชื่อ boundingRect 
+		\item บรรทัดที่ 55-59	ถ้าหากมี contounr เพียง 0 – 1 อัน จะไม่สามารถดำเนินการต่อไปได้ และคืนข้อผิดพลาดกลับไปที่เครื่องผู้ใช้งาน
+		\item บรรทัดที่ 61-63	เป็นการเรียงลำดับขนาดพิ้นที่ของ contounr จากน้อยไปมาก 
+		\item บรรทัดที่ 66-89 เป็นการตัดภาพเอาเฉพาะภาพยาเม็ด และปรับภาพให้เป็นสี่เหลี่ยมจัตุรัส
+		\item บรรทัดที่ 91-93 นำภาพเม็ดยามาหา Canny Edge และเขียนไฟล์รูปภาพ
+		\item บรรทัดที่ 94 	กำหนดตัวแปรชื่อ point สำหรับการเก็บตำแหน่งของสีของภาพเม็ดยา 
+		\item บรรทัดที่ 95-97	กำหนดตัวแปรชื่อ colors colored และ colorname สำหรับเก็บข้อมูลของสี
+		\item บรรทัดที่ 98	กำหนดตัวแปรชื่อ hexColors สำหรับเก็บค่าโค้ดสีจากฐานข้อมูล
+		\item บรรทัดที่ 99	กำหนดตัวแปรชื่อ nameColors สำหรับชื่อสีจากฐานข้อมูล
+		\item บรรทัดที่ 100-120 เป็นการดึงค่าสี BGR จากภาพยาเม็ดด้วยตำแหน่งที่ได้อาเรย์ชื่อ point และนำค่าสีไปเปรียบเทียบกับอาเรย์ชื่อ hexColor เพื่อหาค่าสีที่ใกล้เคียงกันมากที่สุด
+		\item บรรทัดที่ 122-124 เป็นการวัดขนาดด้านยาวของเม็ดยา โดยใช้การอ้างอิงจากวัตถุที่รู้ขนาดอยู่แล้ว
+		\item บรรทัดที่ 125-129 เก็บผลลัพธ์การพิสูจน์เอกลักษณ์ยาเม็ด ไว้ใน req.query 
+		\item บรรทัดที่ 130	เรียกฟังก์ชัน next() เพื่อทำงานฟังก์ชันต่อไป
+		\item บรรทัดที่ 131-135 ถ้าหากการประมวลผลภาพเกิดข้อผิดพลาด จะทำการส่งข้อความบอกข้อผิดพลาดไปที่เครื่องผู้ใช้งาน
+	\end{itemize}
+

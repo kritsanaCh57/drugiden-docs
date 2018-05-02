@@ -1,0 +1,72 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{url}
+\usepackage{amsmath,amssymb}
+\usepackage{setspace}
+\usepackage{fontspec}             % for Thai unicode characters
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 1pt
+\usepackage[Latin,Thai]{ucharclasses}
+\defaultfontfeatures{Mapping=tex-text} 
+%\setmainfont{TeX Gyre Termes}				% Free Times
+%\setsansfont{TeX Gyre Heros}				% Free Helvetica
+%\setmonofont{TeX Gyre Cursor}				% Free Courier
+
+%% For Windows, can  use these existing fonts
+\setmainfont{Times New Roman}	
+\setsansfont{Arial}						% Helvetica substitute
+\setmonofont{Courier New}				
+
+\newfontfamily{\thaifont}[Scale=MatchUppercase,Mapping=tex-text]{TH Sarabun New:script=thai}
+
+\usepackage{listings}
+\lstset{
+basicstyle=\ttfamily,
+numbers=left,
+numberstyle=\small,
+breaklines=true,
+xleftmargin=.1\linewidth,
+frame=single,
+columns=fullflexible,
+captionpos=b,
+showstringspaces=false
+}
+
+\onehalfspacing
+
+\setTransitionTo{Thai}{\thaifont}
+\setTransitionFrom{Thai}{\normalfont}
+
+\title{Fourier Transform}
+\author{Wolfram MathWorld}
+\date{}
+
+\begin{document}
+\maketitle
+ข้อความข้างล่างนี้ตัดมาจาก \cite{WolframForier} ให้ทดลองเขียน source code ของ \LaTeX~เอง เพื่อสร้างเอกสารนี้ โครงของเอกสารคือไฟล์ Exercise.tex
+
+\section{การอ้างถึง การแทรกรูป และการใส่เชิงอรรถ}
+\begin{figure}[h]
+\caption{ตัวอย่างการแปลงฟูเรียร์}
+\label{Fig:TransformExample}
+\end{figure}
+
+\section{การเขียนสมการ และการสร้างข้อย่อย}
+ตัวอย่างข้างล่างนี้มีทั้งการเขียนคำสั่งคณิตศาสตร์แทรกระหว่างข้อความ และการกำหนดสภาพแวดล้อมคณิตศาสตร์ มีการใช้ cases ในการกำหนดค่าให้ฟังก์ชัน และการแทรกข้อความลงในสภาพแวดล้อมคณิตศาสตร์ ลองสังเกตดูว่าฟอนต์ที่ใช้ในสภาพแวดล้อมคณิตศาสตร์กับสภาพแวดล้อมข้อความปกตินั้นต่างกัน ผู้เขียนเอกสารพึงระวังเสมอเมื่อต้องการอ้างถึงตัวแปรต่าง ๆ
+
+ส่วนเงื่อนไขด้านล่างใช้การสร้างข้อย่อยแบบมีเลขข้อ
+
+\section{การเขียนสมการ (เพิ่มเติม) และการสร้างตาราง}
+\label{Sec:Table}
+ตัวอย่างข้างล่างนี้เป็นการใช้สมการหลายบรรทัดและมีการจัดตำแหน่งให้ตรงกัน ในที่นี้จัดตำแหน่งของ $\equiv$ ให้ตรงกับ $=$ ในบรรทัดถัดมา นอกจากนี้ยังมีการใช้สัญลักษณ์พิเศษ $\star$ การใส่ bar เหนือตัวแปร ($\bar{f}$) รวมถึงฟอนต์พิเศษสำหรับ $\mathcal{F}, \mathbf{x}, \mathbf{k}$ และ $\mathbb{R}$ ด้วย สัญลักษณ์พิเศษเหล่านี้ต้องใช้ package amsmath และ amssymb ผู้ที่ต้องใช้สัญลักษณ์ทางคณิตศาสตร์เป็นประจำควรจดจำได้ว่าต้องใช้ฟอนต์แบบใดกับตัวแปรหรือสัญลักษณ์ที่ต้องการ
+
+\section{ข้อสังเกตอื่นๆ}
+Caption ใต้ภาพยังเป็น Figure อยู่ ซึ่งเกิดจากคลาส article ที่ใช้นั้นกำหนดไว้เป็นภาษาอังกฤษ หากต้องการปรับให้เป็นภาษาไทย สามารถตั้งให้เป็นคำที่ต้องการเองได้โดยใช้คำสัง renewcommand เช่น หากสั่ง \lstinline|\renewcommand{\figurename}{Fig.}| Caption ของรูปจะเปลี่ยนจากค่าเริ่มต้นเติม (Figure) ไปเป็น Fig. เป็นต้น หัวข้อของเอกสารอ้างอิงด้านล่างก็เช่นเดียวกัน
+
+ในคลาส chula นั้นมีคำสั่งกำหนดคำให้แล้วทั้งภาษาไทยและภาษาอังกฤษ ซึ่งสามารถเลือกใช้ได้โดยกำหนด option ของคลาสเป็น thaithesis หรือ engthesis
+
+ตารางในข้อ \ref{Sec:Table} นั้นไม่มีชื่อตารางกำกับ และยังยาวเกินกว่าขอบเขตของข้อความที่กำหนด ให้ผู้เรียนลองศึกษาการเขียนตารางรูปแบบอื่นๆ ซึ่งสามารถกำหนดขอบเขตของตารางให้อยู่ในกรอบที่กำหนดด้วยตนเอง
+
+\bibliographystyle{plain}
+\bibliography{Exercise}
+\end{document}

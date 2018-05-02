@@ -1,0 +1,73 @@
+\begin{thebibliography}{10}
+
+\bibitem{bib1}
+{JSON Web Token}, ``Json web token มาตรฐานใหม่
+  ในการทำ authentication,'' March 2018.
+
+\bibitem{bib2}
+{Routing}, ``Routing protocol,'' March 2018.
+
+\bibitem{bib3}
+{Express}, ``Express - node.js web application framework,'' March 2018.
+
+\bibitem{bib4}
+{Contours}, ``Opencv: Contours : Getting started,'' March 2018.
+
+\bibitem{bib5}
+{Canny Edge}, ``Opencv: Canny edge detection,'' March 2018.
+
+\bibitem{bib6}
+{WebView}, ``Javascript in webview,'' March 2018.
+
+\bibitem{bib7}
+{MySQL}, ``เกี่ยวกัับ mysql,'' March 2018.
+
+\bibitem{bib8}
+{Nginx}, ``Nginx,'' March 2018.
+
+\bibitem{bib9}
+{Docker}, ``ทำความรู้จัก docker,'' March 2018.
+
+\bibitem{bib10}
+{Navigating Lifecycle Events}, ``Navigating lifecycle events,'' March 2018.
+
+\bibitem{bib11}
+{Native Application}, ``Native application,'' April 2018.
+
+\bibitem{bib12}
+{Web Application}, ``What is a web application (or "webapp")?,'' April 2018.
+
+\bibitem{bib13}
+{Drug Identification Database}, ``Drug identification database |
+  ฐานข้อมูลการพิสูจน์เอกลักษณ์ยาเม็ดและแคปซูลในประเทศไทย
+  โดย คณะเภสัชศาสตร์
+  มหาวิทยาลัยอุบลราชธานี,'' April
+  2018.
+
+\bibitem{bib14}
+{TCP/IP}, ``Transmission control protocol/internet protocol,'' April 2018.
+
+\bibitem{bib15}
+{Docker Hub}, ``Docker hub,'' April 2018.
+
+\bibitem{bib16}
+{Ionic Framework}, ``Build amazing native apps and progressive web apps with
+  ionic framework and angular,'' April 2018.
+
+\bibitem{bib17}
+{Ubuntu}, ``The leading operating system for pcs, iot devices, servers and the
+  cloud | ubuntu,'' April 2018.
+
+\bibitem{bib18}
+{Nearest Neighbors}, ``Nearest neighbors scikit-learn 0.19.1 documentatio,''
+  April 2018.
+
+\bibitem{bib19}
+{RandomForestClassifier}, ``Randomforestclassifier scikit-learn 0.19.1
+  documentation,'' April 2018.
+
+\bibitem{bib20}
+{บัญญัติไตรยางค์},
+  ``บัญญัติไตรยางค์,'' April 2018.
+
+\end{thebibliography}

@@ -1,0 +1,68 @@
+
+{\setstretch{1.0} }
+
+\section{ }
+	\subsection{ }
+
+\begin{itemize}[label={--}]
+	\item 
+\end{itemize}
+
+\begin{enumerate}
+	\item 
+\end{enumerate}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{Figures/2/}
+			\caption{}
+			\label{Fig:rbg-image}
+		\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\columnwidth]{Figures/2/}
+    \caption{ }
+    \label{Fig:}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{lstlisting}
+
+    \end{lstlisting}
+    \caption{ }
+    \label{Fig: }
+\end{figure}
+
+
+\begin{table}[H]
+	\caption{}
+	\label{tab:}
+	\begin{tabular}{c}
+		\includegraphics[width=\columnwidth]{Figures/table/}	\\ 
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{}
+	\label{tab:}
+    \begin{tabular}{|p{5cm}|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+    {\setstretch{1.0} } &  &  &  &  &  &  &  & & &  \\ \hline
+    \end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+	\centering
+	\caption{}
+	\label{tab:}
+	\begin{tabular}{|c|p{10cm}|}
+	\hline
+	\textbf{สัญลักษณ์} & \multicolumn{1}{c|}{\textbf{การใช้งาน}} \\ \hline
+	\raisebox{-\totalheight}{\includegraphics[width=0.3\textwidth]{Figures/table/use-case/}}
+	& \setstretch{1.5} {} \\ \hline
+	\end{tabular}
+\end{table}
+
+\multicolumn{1}{c|}{}

@@ -1,0 +1,66 @@
+\documentclass[tikz]{standalone}
+
+\usepackage[round,semicolon]{natbib}
+\usepackage{pgfgantt}           % for gantt chart
+
+\begin{document}
+\title{แบบเสนอหัวข้อโครงงาน รายวิชา 2301399 \\ Project Proposal \\ ภาคการศึกษาต้น ปีการศึกษา 2558}
+
+\makeatletter
+\begin{center}
+    {\Large \@title \par}
+\end{center}
+\makeatother
+
+\begin{tabular}{p{4.5cm}p{9cm}}
+ชื่อโครงงาน (ภาษาไทย) & การใช้~\LaTeX ~สำหรับเรียงพิมพ์วิทยานิพนธ์ภาษาไทยและภาษาอังกฤษโดยใช้รูปแบบของจุฬาลงกรณ์มหาวิทยาลัย \\
+ชื่อโครงงาน (ภาษาอังกฤษ)	& Introduction to \LaTeX for typesetting Thai and English thesis with Chulalongkorn University thesis format \\
+อาจารย์ที่ปรึกษา & อาจารย์ ดร.บุญฤทธิ์ อินทิยศ \\
+ผู้ดำเนินการ	& อาจารย์ ดร.ฑิตยา หวานวารี \\
+\end{tabular}
+    \vspace*{0.4cm}
+    \hrule width 15 cm height 0.0 cm depth 0.025 cm
+
+\section{หลักการและเหตุผล}
+\LaTeX~เป็นซอฟต์แวร์สำหรับเรียงพิมพ์ที่เหมาะสำหรับงานด้านคณิตศาสตร์ สามารถเรียงพิมพ์สมการและสัญลักษณ์ต่าง ๆ ได้สะดวกและสวยงาม จึงได้รับความนิยมมากในกลุ่มนักคณิตศาสตร์ วิทยาศาสตร์ รวมถึงงานอื่น ๆ ที่จำเป็นต้องอ้างอิงสมการคำนวณต่าง ๆ แต่ลักษณะการใช้งานของ \LaTeX~ นั้นต่างกับซอฟต์แวร์ประมวลคำทั่วไป ซึ่งมักจะเห็นผลลัพธ์ของการจัดหน้าต่าง ๆ ในขณะที่พิมพ์ จึงจำเป็นต้องเรียนรู้เพิ่มเติมอยู่บ้าง โครงงานนี้จึงจัดทำขึ้นเพื่อเป็นแนวทางสำหรับผู้เริ่มต้นใช้ \LaTeX~ในการทำเอกสาร โดยสามารถนำไปใช้เป็นแบบร่างสำหรับทำเอกสารประกอบโครงงาน รวมถึงวิทยานิพนธ์ของจุฬาลงกรณ์มหาวิทยาลัยได้
+\section{วัตถุประสงค์}
+เพื่อแนะนำการใช้ {\normalfont \LaTeX} เบื้องต้น และเตรียมรูปแบบโครงร่างเอกสารสำหรับนำไปปรับใช้ในเล่มโครงงานหรือวิทยานิพนธ์ฉบับสมบูรณ์ได้
+\section{ขอบเขตของโครงงาน}
+\begin{enumerate}
+    \item แนะนำการพิมพ์เอกสารในภาษาไทย และภาษาอังกฤษ ผ่านการเรียงพิมพ์โดย {\normalfont Xe\LaTeX}
+    \item ได้ตัวอย่างรูปเล่มรายงานที่ใช้กับคลาส chula.cls และ chulanat.bst ซึ่งเป็นรูปแบบการเรียงพิมพ์วิทยานิพนธ์ของจุฬาลงกรณ์มหาวิทยาลัย
+\end{enumerate}
+\section{ขั้นตอนการทำงาน}
+โครงงานนี้ประกอบด้วยการรวบรมเอกสารการคู่มือการใช้ {\normalfont \LaTeX} เขียนเอกสารคำแนะนำประกอบโครงการ ปรับแต่งรูปแบบของคลาส chula.cls เพื่อให้ใช้กับโครงงานระดับปริญญาบัณฑิตได้ และจัดอบรมการใช้ {\normalfont \LaTeX} สำหรับผู้เริ่มต้น
+
+\section{ระยะเวลาการทำงาน}
+จากขั้นตอนการทำงานข้างต้น สามารถเขียน Gantt chart ได้ดังนี้
+
+\begin{ganttchart}[
+    hgrid,
+    vgrid,
+    time slot format=isodate-yearmonth,
+    compress calendar,
+    x unit=.9cm,
+    y unit chart=1.5cm,
+    bar label node/.append style={align=left, text width=4cm}
+    ]{2014-08}{2015-07}
+    \gantttitlecalendar{year, month} \\
+    \ganttbar{1. รวบรวมเอกสารคู่มือการใช้ {\normalfont \LaTeX}}{2014-08}{2014-10} \\
+    \ganttbar{2. เขียนเอกสารแนะนำประกอบโครงการ}{2014-09}{2015-03-31} \\
+    \ganttbar{3. ปรับแต่งคลาส chula.cls}{2014-12}{2015-06-30} \\
+    \ganttbar{4. จัดอบรมการใช้ {\normalfont \LaTeX}}{2015-07-01}{2015-07-31}
+\end{ganttchart}
+
+รายละเอียดเพิ่มเติมเกี่ยวกับการวาด Gantt chart สามารถอ่านได้ที่ \citep{pgfgantt}
+\section{ประโยชน์ที่คาดว่าจะได้รับ}
+นิสิตและผู้ที่สนใจสามารถนำโครงร่างเอกสารนี้ไปปรับใช้และเขียนเอกสารประกอบโครงงานส่งได้
+\section{อุปกรณ์และเครื่องมือที่ใช้}
+\begin{enumerate}
+    \item ขุดซอฟต์แวร์สำหรับเรียงพิมพ์ เช่น Mik\TeX, \TeX Live, Mac\TeX โดยใช้ Xe\LaTeX
+    \item ฟอนต์ TH Sarabun New สำหรับภาษาไทย
+    \item ฟอนต์ TeX Gyre Termes, TeX Gyre Heros และ TeX Gyre Cursor สำหรับภาษาอังกฤษ
+    \item คลาส chula.cls
+    \item รูปแบบรายการอ้างอิง chulanat.bst
+\end{enumerate}
+\end{document}
